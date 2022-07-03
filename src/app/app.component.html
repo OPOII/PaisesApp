@@ -1,16 +1,7 @@
 <div class="row container mt-4">
 
     <div class="col-3">
-        <h2>Busquedas</h2>
-        <hr>
-        <ul class="list-group">
-            <!-- Aquí se pone el router link con el nombre de lo que se uso en el RouteModule -->
-            <!-- routerLinkActive es para asignale algún comportamiento en particular, se le pone el nombre de la clase entre las comillas -->
-            <!-- El routerLinkActiveOptions sirve para que se active si es algo exacto-->
-            <li routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item">Buscar país</li>
-            <li routerLink="region" routerLinkActive="active" class="list-group-item">Por región</li>
-            <li routerLink="capital" routerLinkActive="active" class="list-group-item">Por capital</li>
-        </ul>
+        <app-sidebar></app-sidebar>
     </div>
     <div class="col">
        <router-outlet>
