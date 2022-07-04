@@ -17,8 +17,8 @@ export class PorPaisComponent implements OnInit {
   buscar() {
     this.hayError = false;
     this.paisService.buscarPais(this.termino).subscribe(
-      (respuesta) => {
-        console.log(respuesta);
+      (paises) => {
+        console.log(paises);
       },
       (err) => {
         this.hayError = true;
