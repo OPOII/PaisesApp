@@ -16,7 +16,8 @@ export class PorPaisComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  buscar() {
+  buscar(termino: string) {
+    this.termino = termino;
     this.hayError = false;
     this.paisService.buscarPais(this.termino).subscribe(
       (paises) => {

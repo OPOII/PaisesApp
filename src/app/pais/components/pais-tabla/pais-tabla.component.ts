@@ -7,6 +7,7 @@ import { Country } from '../../interfaces/pais.interface';
   styleUrls: ['./pais-tabla.component.css'],
 })
 export class PaisTablaComponent implements OnInit {
+  //Con esto importo lo que necesito en el componente
   @Input() paises: Country[] = [];
   constructor() {}
 
