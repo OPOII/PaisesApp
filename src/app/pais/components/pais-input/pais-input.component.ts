@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -12,12 +12,12 @@ export class PaisInputComponent implements OnInit {
   //Con esto, exporto lo que necesito para los otros componentes
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
-
+  @Input() placeholder: string = '';
   debouncer: Subject<string> = new Subject();
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.debouncer.pipe(debounceTime(300)).subscribe((valor) => {
       this.onDebounce.emit(valor);
     });

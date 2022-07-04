@@ -1,1 +1,21 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr />
+<!-- si se pone algo en la clase entre [] es por que es el valor
+de una variable, mientras que si se pone normal, es porque es un string-->
+<div class="row">
+  <div class="col">
+    <app-pais-input (onEnter)="buscar($event)" [placeholder]="byCapital">
+    </app-pais-input>
+  </div>
+</div>
+<hr />
+
+<div *ngIf="hayError" class="alert alert-danger">
+  No se encontro nada con el término {{ termino }}
+</div>
+
+<div *ngIf="paises.length > 0" class="row">
+  <div class="col">
+    <app-pais-tabla [paises]="paises"> </app-pais-tabla>
+  </div>
+</div>

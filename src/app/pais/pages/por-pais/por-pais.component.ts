@@ -12,10 +12,9 @@ export class PorPaisComponent implements OnInit {
   termino: string = '';
   hayError: boolean = false;
   paises: Country[] = [];
+  byCountry = 'Buscar país...';
   constructor(private paisService: PaisService) {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
   buscar(termino: string) {
     this.termino = termino;
     this.hayError = false;
