@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisService } from '../../services/pais.service';
 
 @Component({
   selector: 'app-por-pais',
@@ -8,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class PorPaisComponent implements OnInit {
   //Termino es la variable que se le asigno al ngModel
   termino: string = '';
-  constructor() {}
+  constructor(private paisService: PaisService) {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
   buscar() {
-    console.log(this.termino);
+    this.paisService.buscarPais(this.termino).subscribe((respuesta) => {
+      console.log(respuesta);
+    });
   }
 }
