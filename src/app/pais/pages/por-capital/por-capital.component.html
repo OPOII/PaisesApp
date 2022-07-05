@@ -1,11 +1,13 @@
-<h2>Por Capital</h2>
-<hr />
-<!-- si se pone algo en la clase entre [] es por que es el valor
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>Por Capital</h2>
+  <hr />
+  <!-- si se pone algo en la clase entre [] es por que es el valor
 de una variable, mientras que si se pone normal, es porque es un string-->
-<div class="row">
-  <div class="col">
-    <app-pais-input (onEnter)="buscar($event)" [placeholder]="byCapital">
-    </app-pais-input>
+  <div class="row">
+    <div class="col">
+      <app-pais-input (onEnter)="buscar($event)" [placeholder]="byCapital">
+      </app-pais-input>
+    </div>
   </div>
 </div>
 <hr />
