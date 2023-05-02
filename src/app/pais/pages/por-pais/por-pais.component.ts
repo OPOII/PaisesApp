@@ -18,6 +18,7 @@ export class PorPaisComponent implements OnInit {
   termino: string = '';
   hayError: boolean = false;
   paises: Country[] = [];
+  public isLoading: boolean = false;
   paisesSugeridos: Country[] = [];
   byCountry = 'Buscar país...';
   mostrarSugerencias: boolean = false;
@@ -27,14 +28,17 @@ export class PorPaisComponent implements OnInit {
     this.mostrarSugerencias = false;
     this.termino = termino;
     this.hayError = false;
+    this.isLoading = true;
     this.paisService.buscarPais(this.termino).subscribe(
       (paises) => {
         console.log(paises);
         this.paises = paises;
+        this.isLoading = false;
       },
       (err) => {
         this.hayError = true;
         console.log(err);
+        this.isLoading = false;
         this.paises = [];
       }
     );
