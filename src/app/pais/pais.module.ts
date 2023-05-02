@@ -9,6 +9,7 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { RouterModule } from '@angular/router';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
     VerPaisComponent,
     PaisTablaComponent,
     PaisInputComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [CommonModule, FormsModule, RouterModule],
   exports: [
